@@ -1,0 +1,12 @@
+name: "Comment"
+description: "Creates a PR comment"
+inputs:
+  token:
+    description: "The token to use to access the GitHub API"
+    required: true
+  issue_number:
+    description: "PR number"
+    required: true
+runs:
+  using: "node16"
+  main: "dist/index.js"
