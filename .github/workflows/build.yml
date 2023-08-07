@@ -5,12 +5,13 @@ on:
 jobs:
   comment:
     runs-on: windows-latest
+    name: Creates a PR Comment
     steps:
-      name: Create a PR comment
-      uses: jcbalbuena/Test@${{ github.sha }}
-      with:
-        owner: ${{ github.repository_owner }}
-        repo: ${{ github.event.repository.name }}
-        pr_number: ${{ github.event.number }}
-        token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create a PR comment
+        uses: jcbalbuena/Test@${{ github.sha }}
+        with:
+          owner: ${{ github.repository_owner }}
+          repo: ${{ github.event.repository.name }}
+          pr_number: ${{ github.event.number }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       
