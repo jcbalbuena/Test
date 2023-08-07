@@ -1,0 +1,9 @@
+on:
+  - pull_request
+jobs:
+  comment:
+    runs-on: windows-latest
+    steps:
+      - run: node --version
+      - run: npm --version
+      
