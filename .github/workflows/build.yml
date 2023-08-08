@@ -6,8 +6,8 @@ jobs:
   comment:
     runs-on: windows-latest
     steps:
-      - uses: jcbalbuena/Test@${{ github.sha }}
       - name: Create a PR comment
+        uses: jcbalbuena/Test@${{ github.sha }}
         with:
           issue_number: ${{ github.event.number }}
           token: ${{ secrets.GITHUB_TOKEN }}
