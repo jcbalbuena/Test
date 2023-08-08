@@ -3,11 +3,11 @@ name: PR comment
 on:
   - pull_request
 jobs:
-  permissions:
-    contents: 'read'
-    id-token: 'write'
   comment:
     runs-on: windows-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: Create a PR comment
         uses: jcbalbuena/Test@main
