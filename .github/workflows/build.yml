@@ -3,6 +3,9 @@ name: PR comment
 on:
   - pull_request
 jobs:
+  permissions:
+    contents: 'read'
+    id-token: 'write'
   comment:
     runs-on: windows-latest
     steps:
