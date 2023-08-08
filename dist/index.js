@@ -9848,6 +9848,8 @@ async function main() {
     }
 
 }
+
+main();
 })();
 
 module.exports = __webpack_exports__;
