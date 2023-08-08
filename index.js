@@ -1,19 +1,5 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
-const fetch = require("node-fetch");
-
-
-async function createComment(octokit, token) {
-
-
-  await octokit.request('GET /repos/{owner}/{repo}/issues/comments', {
-    owner: 'OWNER',
-    repo: 'REPO',
-    headers: {
-      'X-GitHub-Api-Version': '2022-11-28'
-    }
-  })
-}
 
 async function main() {
     try {
